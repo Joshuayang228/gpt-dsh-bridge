@@ -4,7 +4,7 @@
 
 [简体中文](README.zh-CN.md) · [Connect ChatGPT to your computer](docs/connect-chatgpt.md) · [Full architecture](docs/architecture.md) · [Runnable demo](examples/README.md) · [Security](SECURITY.md)
 
-> **Status:** v0.1.0 publication candidate. Unit tests pass; a clean-machine live-host installation and license/ownership review are still pending. **Not an official OpenAI or DeepSeek project.**
+> **Status:** v0.1.0 public preview. 126 unit tests pass, and plugin installation, health and native Workspace/Session operations were checked in an isolated DSH home. A full ChatGPT → DSH Agent → acceptance run and independent licensing review remain unverified. **Not an official OpenAI or DeepSeek project.**
 
 ## See it in 30 seconds
 

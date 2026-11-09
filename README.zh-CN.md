@@ -4,7 +4,7 @@
 
 [English](README.md) · [ChatGPT 连接本地电脑教程](docs/connect-chatgpt.md) · [完整架构](docs/architecture.md) · [实操演示](examples/README.md) · [安全说明](SECURITY.md)
 
-> **当前状态：** v0.1.0 开源候选版。单元测试已通过；全新环境的真实安装验证和代码权属检查仍待完成。**本项目不是 OpenAI 或 DeepSeek 官方产品。**
+> **当前状态：** v0.1.0 公开预览版。126 项单元测试通过，已在隔离的 DSH_HOME 中验证插件安装、健康检查和 Workspace/Session 操作；完整的 ChatGPT → DSH Agent → 验收流程及独立的权属审查尚未完成。**本项目不是 OpenAI 或 DeepSeek 官方产品。**
 
 ## 30 秒看懂它做什么
 

@@ -10,7 +10,7 @@
 | Unit test verification | ✅ Complete | 126/126 passing in `dsh-orchestrator/test/` |
 | Isolated fresh DSH install, health, Workspace / Session smoke test | ✅ Complete | Verified using a separate disposable DSH_HOME, without model invocation |
 | Connected ChatGPT → real DSH prompt → evidence Review | ❌ Not started | Requires authorized connector and model-configured DSH environment |
-| Public GitHub publication | ❌ Not started | Requires owner's release approval |
+| Public GitHub publication | ✅ Complete | [Joshuayang228/gpt-dsh-bridge](https://github.com/Joshuayang228/gpt-dsh-bridge) (`main`) |
 
 ## History
 
