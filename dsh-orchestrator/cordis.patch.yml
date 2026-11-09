@@ -1,0 +1,35 @@
+# dsh-orchestrator — loader patch.
+#
+# This file is the whole configuration surface. It inserts exactly one row into
+# the profile that installs this plugin.
+#
+# SECURITY INVARIANTS — enforced in code, not by convention:
+#   * `host` is an ALLOWLIST of loopback spellings ('127.0.0.1', '::1',
+#     'localhost'). Setting '0.0.0.0', '::', a LAN IP, or any other host makes
+#     the plugin refuse to start, so DSH's startup audit reports it loudly.
+#     There is no configuration that exposes this surface off-host.
+#   * `port: 0` asks the OS for a free loopback port. The real port is
+#     published in <DSH_HOME>/orchestrator/endpoint.json, which never contains
+#     the control token.
+#   * There is no LAN proxy, no QR route, no static file serving, and no query
+#     string token. A request carrying `?token=`/`?t=` is rejected with 400 so
+#     the "no query token" rule cannot be violated by accident.
+#   * `allowUntestedVersion: false` makes an unrecognised DSH version a startup
+#     failure instead of a silent best-effort run.
+#
+# The control token itself is NOT stored by this plugin. It lives in DSH's own
+# credential store as the record `dsh-orchestrator/control-token`
+# (<DSH_HOME>/.credentials.yaml), which DSH already writes atomically under a
+# cross-process lock and refuses to boot when it is readable beyond its owner.
+# Set `token` below only to pin a specific value; it must be >= 32 characters.
+- insert:
+    - id: dsh-orchestrator
+      name: 'dsh-orchestrator'
+      config:
+        host: '127.0.0.1'
+        port: 0
+        allowUntestedVersion: false
+        # requestTimeoutMs: 30000
+        # waitTimeoutMs: 120000
+        # waitTimeoutMaxMs: 600000
+        # token: '<>= 32 chars; omit to use the DSH credential store>'

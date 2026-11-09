@@ -1,0 +1,7 @@
+{
+  "name": "gpt-dsh-bridge-invoice-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Intentionally failing test fixture for an opt-in DSH orchestration demonstration"
+}

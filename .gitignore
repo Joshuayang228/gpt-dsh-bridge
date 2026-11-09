@@ -1,0 +1,35 @@
+# Credentials, machine-local and agent state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.credentials*
+.DSH_HOME/
+.dsh/
+state/
+*.log
+*.pid
+endpoint.json
+
+# Dependencies and artifacts
+node_modules/
+dist/
+coverage/
+.nyc_output/
+*.tgz
+*.zip
+test-results/
+_release/
+.tmp/
+tmp/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Personal workspace and editor data
+.vscode/
+.idea/
+.obsidian/

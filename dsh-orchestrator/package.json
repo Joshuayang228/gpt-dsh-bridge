@@ -1,0 +1,36 @@
+{
+  "name": "dsh-orchestrator",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal localhost-only DSH Orchestrator control surface for ChatGPT: workspace/session routing over the official DSH sessionController and workspaceController.",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "dsh": "0.2.0-rc.2 || 0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": "0.2.0-rc.2 || 0.2.1-rc.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  }
+}
